@@ -116,6 +116,7 @@ class boconganthutuc_Controller extends Controller {
             $birth_date = replace_bad_char(get_request_var('birth_date', ''));
             $gender = replace_bad_char(get_request_var('gender', ''));
             $full_name = replace_bad_char(get_request_var('full_name', ''));
+			$add = replace_bad_char(get_request_var('add', ''));
 
             if((!$identify_number && !$citizen_pid) || !$birth_date || !$gender || !$full_name ) {
                 echo json_encode([
